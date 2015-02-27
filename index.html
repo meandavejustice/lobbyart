@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+        <style type="text/css" media="screen">
+         html, body {
+             width: 100%;
+             height: 100%;
+             margin: 0;
+             font-family: 'Abel', sans-serif;
+             scroll: none;
+         }
+         h1 {
+             font-size: 60px;
+             text-shadow: -6px -1px 5px #DF93A1;
+         }
+          video {
+             width: 100%;
+         }
+         .content {
+             overflow: hidden;
+             height: 100%;
+         }
+         aside {
+             position: absolute;
+             top: 50%;
+             left: 42%;
+             min-width: 105px;
+             text-align: center;
+             color: rgba(210, 210, 210, 0.36);
+             cursor: help;
+         }
+         aside:hover {
+             color: rgba(224, 224, 224, 0.49);
+         }
+         aside p {
+             text-align: left;
+         }
+         a {
+             position: fixed;
+             bottom: 10px;
+             left: 10px;
+             text-decoration: none;
+             color: pink;
+         }
+         a:hover {
+             text-decoration: underline;
+         }
+        </style>
+    </head>
+    <body>
+      <div class="content">
+          <video src="tube.ogv" autoplay="true"></video>
+          <aside>
+            <h1>lobby art</h1>
+
+            <p>coming soon<span></span></p>
+          </aside>
+          <a href="mailto:davejustishh@gmail.com">inquiry</a>
+      </div>
+    </body>
+
+    <script>
+     var ellArr = [' ', '.  ', '.. ', '...'];
+     var ell = document.querySelector('p span');
+     var step = 0;
+
+     setInterval(update, 500);
+     function update() {
+       if (step === 4) step = 0;
+       ell.innerText = ellArr[step++];
+     }
+    </script>
+</html>
